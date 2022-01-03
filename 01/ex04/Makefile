@@ -1,10 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/03 09:09:39 by jode-vri          #+#    #+#              #
+#    Updated: 2022/01/03 09:09:41 by jode-vri         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		= Replace
 SRCSDIR		= .
 
 SRCS		= main.cpp
 
 CC			= clang++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
+CFLAGS		= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 all: $(NAME)
 

@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/03 09:08:17 by jode-vri          #+#    #+#              #
+#    Updated: 2022/01/03 09:08:20 by jode-vri         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		= Account
 SRCSDIR		= .
 
@@ -5,7 +17,7 @@ SRCS		= tests.cpp		\
 			  Account.cpp
 
 CC			= clang++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
+CFLAGS		= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 all: $(NAME)
 
