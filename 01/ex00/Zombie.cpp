@@ -13,6 +13,12 @@
 #include <iostream>
 #include "Zombie.hpp"
 
+Zombie::Zombie() {
+	setName("No name");
+	std::cout << "Default Constructor called: " << std::endl;
+	return ;
+}
+
 Zombie::Zombie(std::string name) : _name(name) {
 	std::cout << "Constructor called with name: " << name << std::endl;
 	return ;
