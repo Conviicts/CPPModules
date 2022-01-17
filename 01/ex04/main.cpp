@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:09:36 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/17 07:26:17 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/17 07:53:36 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main(int ac, char **av) {
         }
         content += line + '\n';
     }
-    replaceFile << content << std::endl;
+    replaceFile << content;
 	file.close();
 	replaceFile.close();
 	return (0);
