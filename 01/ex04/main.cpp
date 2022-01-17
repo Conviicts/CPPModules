@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:09:36 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/03 09:09:37 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/17 07:26:17 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(int ac, char **av) {
 		return (1);
 	}
 	newFile = av[1] + std::string(".replace");
-	std::ofstream replaceFile(newFile);
+	std::ofstream replaceFile(newFile.c_str());
 	if (!replaceFile.is_open()) {
 		std::cerr << "Unable to open/create file: " << newFile << std::endl;
 		return (1);
