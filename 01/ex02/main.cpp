@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:08:29 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/03 09:08:30 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/17 07:38:00 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(void)
 {
-	std::string str = "HI THIS BRAIN";
+	std::string str = "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
 	std::string	&stringREF = str;
 
