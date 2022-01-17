@@ -11,21 +11,28 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "Zombie.hpp"
 
 Zombie::Zombie() {
 	setName("No name");
-	std::cout << "Default Constructor called: " << std::endl;
+	std::cout	<< "Default Constructor called with name: ";
+	std::cout	<< std::right << std::setfill(' ') << std::setw(12) 
+				<< "\033[1;32m" << getName() << "\033[0m" << std::endl;
 	return ;
 }
 
 Zombie::Zombie(std::string name) : _name(name) {
-	std::cout << "Constructor called with name: " << name << std::endl;
+	std::cout	<< "Constructor called with name: \033[1;32m";
+	std::cout	<< std::right << std::setfill(' ') << std::setw(12)
+				<< name << "\033[0m" << std::endl;
 	return ;
 }
 
 Zombie::~Zombie(void) {
-	std::cout << getName() << " Destructor called" << std::endl;
+	std::cout	<< "\033[0mDestructor called for: \033[1;32m";
+	std::cout	<< std::right << std::setfill(' ') << std::setw(27) 
+				<< getName() << "\033[0m" << std::endl;
 	return ;
 }
 
