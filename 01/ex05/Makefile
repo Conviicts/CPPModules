@@ -14,7 +14,7 @@ NAME		= Karen
 SRCSDIR		= .
 
 SRCS		= main.cpp		\
-			  karen.cpp
+			  Karen.cpp
 
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
