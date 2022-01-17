@@ -25,7 +25,7 @@ void	HumanB::attack(void) const {
 	return ;
 }
 
-void	HumanB::setWeapon(Weapon& weapon) {
+void	HumanB::setWeapon(Weapon &weapon) {
 	_weapon = &weapon;
 	return ;
 }
