@@ -18,8 +18,8 @@ SRCS		=	main.cpp		\
 				newZombie.cpp	\
 				RandomChump.cpp	\
 
-CC			= clang++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CC			= c++
+CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 all: $(NAME)
 
