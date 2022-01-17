@@ -12,6 +12,7 @@
 
 #include "Zombie.hpp"
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 
 int main(int ac, char **av) {
@@ -23,9 +24,16 @@ int main(int ac, char **av) {
 	N = std::atoi(av[1]);
 	if ( N <= 0)
 		return (1);
-	horde = zombieHorde(N, "Michel");
+	std::cout	<< std::setfill('-') << std::setw(61)
+				<< "\033[1;34m CONSTRUCTORS \033[0m------------------" << std::endl;
+	horde = zombieHorde(N, "Zombie");
+	std::cout	<< std::setfill('-') << std::setw(61)
+				<< "\033[1;34m ANNOUNCES \033[0m-------------------" << std::endl;
 	for (int i = 0; i < N; i++)
 		horde[i].announce();
+	std::cout	<< std::setfill('-') << std::setw(61)
+				<< "\033[1;34m DESTRUCTORS \033[0m------------------" << std::endl;
 	delete [] horde;
+	std::cout	<< std::setfill('-') << std::setw(50) << "" << std::endl;
 	return (0);
 }
