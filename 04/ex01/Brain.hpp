@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:19:56 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/04 13:48:12 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/20 02:48:08 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 class Brain {
 	private:
