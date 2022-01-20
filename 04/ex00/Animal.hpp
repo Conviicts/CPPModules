@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:19:56 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/04 07:46:34 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/20 01:51:52 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Animal {
 		std::string	_type;
 	public:
 		Animal(void);
-		~Animal(void);
+		virtual ~Animal(void);
 		Animal(Animal const & ref);
 		
 		Animal			&operator=(Animal const & ref);
