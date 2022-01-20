@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 
 Animal::Animal(void) : _type("Animal") {
-	std::cout << "Animal constructor calledwith name " << _type << "." << std::endl;
+	std::cout << "Animal constructor called with name " << _type << "." << std::endl;
 }
 
 Animal::~Animal(void) {
