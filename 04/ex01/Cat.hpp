@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:19:56 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/04 07:50:29 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/20 02:20:58 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 #include <string>
 #include "Animal.hpp"
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal {
+	private:
+		Brain *_brain;
 	public:
 		Cat(void);
 		~Cat(void);
@@ -26,6 +29,7 @@ class Cat : public Animal {
 		
 		Cat	&operator=(Cat const & ref);
 		void	makeSound(void) const;
+		Brain	&getBrain(void) const;
 };
 
 #endif
