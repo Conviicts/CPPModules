@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:20:07 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/25 10:58:26 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/25 11:04:29 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int random(int min, int max)
 }
 
 int main(void) {
-	Bureaucrat reda("Reda", 150);
+	Bureaucrat reda("Reda", 120);
 	Bureaucrat yohann("Yohann", 2);
 	Form	*forms[4];
 
@@ -46,7 +46,9 @@ int main(void) {
     }
 	try {
 		yohann.signForm(*forms[0]);
-		reda.signForm(*forms[0]);
+		reda.signForm(*forms[1]);
+		yohann.signForm(*forms[2]);
+		reda.signForm(*forms[3]);
 	}
     catch(const std::exception & e) {
         std::cerr << e.what() << '\n';
