@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:20:07 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/25 11:04:29 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/26 04:22:28 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int random(int min, int max)
 
 int main(void) {
 	Bureaucrat reda("Reda", 120);
-	Bureaucrat yohann("Yohann", 2);
+	Bureaucrat yohann("Yohann", 1);
 	Form	*forms[4];
 
 	srand(time(NULL));
@@ -54,8 +54,10 @@ int main(void) {
         std::cerr << e.what() << '\n';
     }
 	for (size_t i = 0; i < 4; i++) {
-		if (forms[i] != NULL)
+		if (forms[i] != NULL) {
+			std::cout << *forms[i] << std::endl;
 			delete forms[i];
+		}
 	}
 	
 }
