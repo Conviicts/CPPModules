@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:21:22 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/03 09:21:23 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/27 15:59:26 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ FragTrap::~FragTrap(void) {
 }
 
 void		FragTrap::attack(std::string const & target) {
+	if (_energy_points <= 0) {
+		std::cout << "FragTrap: " << _name << " does not have enought energy point" << std::endl;
+		return ;
+	}
+	_energy_points--;
 	std::cout	<< "FragTrap " << _name 
 				<< " attack "<< target
 				<< ", causing " << _attack_damage

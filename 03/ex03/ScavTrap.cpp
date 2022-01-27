@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:22:31 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/03 09:22:32 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:00:10 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ ScavTrap::~ScavTrap(void) {
 }
 
 void		ScavTrap::attack(std::string const & target) {
+	if (_energy_points <= 0) {
+		std::cout << "ScavTrap: " << _name << " does not have enought energy point" << std::endl;
+		return ;
+	}
+	_energy_points--;
 	std::cout	<< "ScavTrap " << _name 
 				<< " attack "<< target
 				<< ", causing " << _attack_damage
