@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 09:19:52 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/27 15:58:37 by jode-vri         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) : _name("null"), _hit_points(10), _energy_points(10), _attack_damage(0) {
@@ -43,6 +31,11 @@ ClapTrap::~ClapTrap(void) {
 }
 
 void		ClapTrap::attack(std::string const & target) {
+	if (_energy_points <= 0) {
+		std::cout << "ClapTrap: " << _name << " does not have enought energy point" << std::endl;
+		return ;
+	}
+	_energy_points--;
 	std::cout	<< "ClapTrap " << _name 
 				<< " attack "<< target
 				<< ", causing " << _attack_damage

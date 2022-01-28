@@ -6,7 +6,7 @@
 /*   By: jode-vri <jode-vri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 09:19:52 by jode-vri          #+#    #+#             */
-/*   Updated: 2022/01/27 16:06:00 by jode-vri         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:54:45 by jode-vri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ ClapTrap::~ClapTrap(void) {
 }
 
 void		ClapTrap::attack(std::string const & target) {
+	if (_energy_points <= 0) {
+		std::cout << "ClapTrap: " << _name << " does not have enought energy point" << std::endl;
+		return ;
+	}
+	_energy_points--;
 	std::cout	<< "ClapTrap " << _name 
 				<< " attack "<< target
 				<< ", causing " << _attack_damage
