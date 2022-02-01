@@ -1,8 +1,8 @@
 #include <iostream>
-#include <cstdint>
+#include <stdint.h>
 
 typedef struct {
-    int i;
+    std::string	data;
 } Data;
 
 uintptr_t   serialize(Data *ptr) {
@@ -17,20 +17,14 @@ Data *  deserialize(uintptr_t raw) {
 
 int main(void) {
 
-    Data *      data = new Data;
-    uintptr_t   raw;
+    Data		*data = new Data;
+	Data		*new_data;
+	uintptr_t	raw;
 
-    data->i = 5;
-    std::cout << data->i << std::endl;
-    std::cout << std::hex << data << std::endl;
-    
-    raw = serialize(data);
-    data = deserialize(raw);
-
-    std::cout << data->i << std::endl;
-    std::cout << std::hex << data << std::endl;
-
-    delete data;
+	data->data = "Hello world !";
+	raw = serialize(data);
+	new_data = deserialize(raw);
+	std::cout << new_data->data << std::endl;
 
     return (0);
 }
