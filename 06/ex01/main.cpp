@@ -11,7 +11,7 @@ uintptr_t   serialize(Data *ptr) {
 }
 
 Data *  deserialize(uintptr_t raw) {
-    Data * ptr = reinterpret_cast<Data *>(raw);
+    Data *ptr = reinterpret_cast<Data *>(raw);
     return (ptr);
 }
 
@@ -22,9 +22,14 @@ int main(void) {
 	uintptr_t	raw;
 
 	data->data = "Hello world !";
+
+	std::cout << data->data << std::endl;
+	std::cout << std::hex << data << std::endl;
+
 	raw = serialize(data);
 	new_data = deserialize(raw);
 	std::cout << new_data->data << std::endl;
+	std::cout << std::hex << new_data << std::endl;
 
     return (0);
 }
