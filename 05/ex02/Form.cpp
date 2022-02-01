@@ -21,6 +21,7 @@ Form::~Form(void) {
 
 Form::Form(Form const &ref) {
     _name = ref._name;
+    _target = ref._target;
     _gradeToExecute = ref._gradeToExecute;
     _gradeToSign = ref._gradeToSign;
 }
@@ -28,6 +29,7 @@ Form::Form(Form const &ref) {
 
 Form	&Form::operator=(Form const &ref) {
     _name = ref._name;
+    _target = ref._target;
     _gradeToExecute = ref._gradeToExecute;
     _gradeToSign = ref._gradeToSign;
 
