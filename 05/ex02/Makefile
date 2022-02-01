@@ -8,7 +8,7 @@ SRCS		=	main.cpp					\
 				RobotomyRequestForm.cpp		\
 				PresidentialPardonForm.cpp
 
-CC			= clang++
+CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 all: $(NAME)

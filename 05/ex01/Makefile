@@ -5,7 +5,7 @@ SRCS		=	main.cpp		\
 				Bureaucrat.cpp	\
 				Form.cpp
 
-CC			= clang++
+CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 all: $(NAME)

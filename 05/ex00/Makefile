@@ -4,7 +4,7 @@ SRCSDIR		= .
 SRCS		=	main.cpp	\
 				Bureaucrat.cpp
 
-CC			= clang++
+CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 all: $(NAME)
