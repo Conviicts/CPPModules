@@ -11,18 +11,12 @@ Base	*generate(void) {
     std::srand(std::time(NULL));
     int i = std::rand() % 3;
 
-    if (i == 0) {
-        std::cout << "[A] Created" << std::endl;
+    if (i == 0)
         return (new A);
-    }
-    else if (i == 1) {
-        std::cout << "[B] Created" << std::endl;
+    else if (i == 1)
         return (new B);
-    }
-    else {
-        std::cout << "[C] Created" << std::endl;
+    else
         return (new C);
-    }
 }
 
 void identify(Base* p) {
