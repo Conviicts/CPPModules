@@ -2,7 +2,7 @@ NAME		= convert
 SRCSDIR		= .
 
 SRCS		=	main.cpp	\
-				convertion.cpp
+				Convertion.cpp
 
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
