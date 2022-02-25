@@ -30,6 +30,6 @@ int main(void) {
 	new_data = deserialize(raw);
 	std::cout << new_data->data << std::endl;
 	std::cout << std::hex << new_data << std::endl;
-
+	delete data;
     return (0);
 }
