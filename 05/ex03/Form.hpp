@@ -10,11 +10,11 @@ class Bureaucrat;
 
 class Form {
 	private:
-		std::string	_name;
-		std::string	_target;
-        bool        _signed;
-		int			_gradeToSign;
-		int			_gradeToExecute;
+		std::string	const	_name;
+		std::string			_target;
+        bool        		_signed;
+		int const			_gradeToSign;
+		int	const			_gradeToExecute;
 
 		class GradeTooLowException : public std::exception {
 			public:

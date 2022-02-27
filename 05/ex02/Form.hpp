@@ -10,11 +10,11 @@ class Bureaucrat;
 
 class Form {
 	private:
-		std::string	_name;
-		std::string	_target;
-        bool        _signed;
-		int			_gradeToSign;
-		int			_gradeToExecute;
+		std::string	const	_name;
+		std::string			_target;
+        bool        		_signed;
+		int const			_gradeToSign;
+		int	const			_gradeToExecute;
 
 		class GradeTooLowException : public std::exception {
 			public:
@@ -35,18 +35,18 @@ class Form {
 			}
 		};
 	public:
-		Form(std::string name, std::string target, int gradeTosign, int gradeToExecute);
+		Form(std::string const name, std::string target, int gradeTosign, int gradeToExecute);
 		~Form(void);
 		Form(Form const &);
 
 		Form	&operator=(Form const &);
 
-		std::string	getName() const;		
-		bool		getSigned() const;	
-		int			getGradeToSign() const;
-		int			getGradeToExecute() const;
-		void		beSigned(const Bureaucrat &);
-		std::string	getTarget(void) const ;
+		std::string	const	getName() const;		
+		bool				getSigned() const;	
+		int					getGradeToSign() const;
+		int					getGradeToExecute() const;
+		void				beSigned(const Bureaucrat &);
+		std::string			getTarget(void) const ;
 
 		virtual void 	execute(Bureaucrat const &executor) const = 0;
 };

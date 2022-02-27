@@ -26,15 +26,13 @@ int main(void) {
 	Bureaucrat              jean("jean", 80);
 
 	ShrubberyCreationForm   a("target1");
-	ShrubberyCreationForm   b(a);
-	ShrubberyCreationForm   c = b;
+	ShrubberyCreationForm   b("target4");
 	RobotomyRequestForm     d("target2");
 	PresidentialPardonForm  e("target3");
 
 	std::cout << std::endl << "-------------- FORM ---------------" << std::endl;
 	std::cout << "ShrubberyCreationForm a -> " << a << std::endl;
 	std::cout << "ShrubberyCreationForm b -> " << b << std::endl;
-	std::cout << "ShrubberyCreationForm c -> " << c << std::endl;
 	std::cout << "RobotomyRequestForm d -> " << d << std::endl;
 	std::cout << "PresidentialPardonForm -> " << e << std::endl;
 
@@ -43,7 +41,7 @@ int main(void) {
 		std::cout << std::endl << "---------- MICHEL SIGN FORM ----------" << std::endl;
 		michel.signForm(e);
 		michel.signForm(d);
-		michel.signForm(c);
+		michel.signForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -53,7 +51,7 @@ int main(void) {
 		std::cout << std::endl << "--------- JEAN SIGN FORM ----------" << std::endl;
 		jean.signForm(e);
 		jean.signForm(d);
-		jean.signForm(c);
+		jean.signForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -63,7 +61,7 @@ int main(void) {
 		std::cout << std::endl << "--------- KEVIN SIGN FORM ----------" << std::endl;
 		kevin.signForm(e);
 		kevin.signForm(d);
-		kevin.signForm(c);
+		kevin.signForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -73,7 +71,7 @@ int main(void) {
 		std::cout << std::endl << "--------- MICHEL EXECUTE FORM --------" << std::endl;
 		michel.executeForm(e);
 		michel.executeForm(d);
-		michel.executeForm(c);
+		michel.executeForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -83,7 +81,7 @@ int main(void) {
 		std::cout << std::endl << "-------- JEAN EXECUTE FORM --------" << std::endl;
 		jean.executeForm(e);
 		jean.executeForm(d);
-		jean.executeForm(c);
+		jean.executeForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -93,7 +91,7 @@ int main(void) {
 		std::cout << std::endl << "-------- KEVIN EXECUTE FORM --------" << std::endl;
 		kevin.executeForm(e);
 		kevin.executeForm(d);
-		kevin.executeForm(c);
+		kevin.executeForm(a);
 	}
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
