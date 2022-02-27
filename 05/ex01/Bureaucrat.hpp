@@ -10,19 +10,19 @@ class Form;
 
 class Bureaucrat {
 	private:
-		std::string _name;
-        int         _grade;
+		std::string const	_name;
+        int         		_grade;
 
-		Bureaucrat(void) {};
+		Bureaucrat(void);
 	public:
 		Bureaucrat(std::string name, int grade);
 		~Bureaucrat(void);
-		Bureaucrat(Bureaucrat const &);
+		Bureaucrat(Bureaucrat const &ref);
 
-		Bureaucrat	&operator=(Bureaucrat const &);
+		Bureaucrat	&operator=(Bureaucrat const &ref);
 
 		int getGrade(void) const;
-        std::string getName(void) const;
+        std::string const getName(void) const;
 		void increment(void);
 		void decrement(void);
 

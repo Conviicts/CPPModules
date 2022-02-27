@@ -36,7 +36,7 @@ class Form {
 		};
 	public:
 		Form(std::string name, std::string target, int gradeTosign, int gradeToExecute);
-		~Form(void);
+		virtual ~Form(void);
 		Form(Form const &);
 
 		Form	&operator=(Form const &);

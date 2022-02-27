@@ -105,6 +105,9 @@ int main(void) {
 	catch(std::exception & e) {
 		std::cout << e.what() << std::endl;
 	}
+	delete a;
+	delete b;
+	delete c;
 
     return (0);
 }

@@ -1,17 +1,16 @@
 
 #include "Form.hpp"
 
-Form::Form(std::string name, int gradeTosign, int gradeToExecute) : _name(name), _signed(false) {
-    if (gradeTosign < 1)
+Form::Form(std::string name, int gradeTosign, int gradeToExecute)
+	: _name(name), _signed(false), _gradeToSign(gradeTosign), _gradeToExecute(gradeToExecute) {
+    if (this->_gradeToSign < 1)
         throw GradeTooHighException();
-    if (gradeTosign > 150)
+    if (this->_gradeToSign > 150)
         throw GradeTooLowException();
-    _gradeToSign = gradeTosign;
-    if (gradeToExecute < 1)
+    if (this->_gradeToExecute < 1)
         throw GradeTooHighException();
-    if (gradeToExecute > 150)
+    if (this->_gradeToExecute > 150)
         throw GradeTooLowException();
-    _gradeToExecute = gradeToExecute;
     return ;
 }
 
@@ -19,22 +18,18 @@ Form::~Form(void) {
     return ;
 }
 
-Form::Form(Form const &ref) {
-    _name = ref._name;
-    _gradeToExecute = ref._gradeToExecute;
-    _gradeToSign = ref._gradeToSign;
+Form::Form(Form const &ref)
+	: _name(ref._name), _signed(false), _gradeToSign(ref._gradeToSign), _gradeToExecute(ref._gradeToExecute) {
+	return ;
 }
 
 
 Form	&Form::operator=(Form const &ref) {
-    _name = ref._name;
-    _gradeToExecute = ref._gradeToExecute;
-    _gradeToSign = ref._gradeToSign;
-
-    return (*this);
+    this->_signed = ref._signed;
+	return (*this);
 }
 
-std::string	Form::getName() const {
+std::string	const Form::getName() const {
     return (_name);
 }
 
