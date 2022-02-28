@@ -20,55 +20,35 @@ Base	*generate(void) {
 }
 
 void identify(Base* p) {
-	try {
-		A &a = dynamic_cast<A&>(*p);
-		(void)a;
-		std::cout << "identify from pointer: A" << std::endl;
-	} catch (std::exception &ex) {
-		try {
-			B &b = dynamic_cast<B&>(*p);
-			(void)b;
+	if (p) {
+		if (dynamic_cast<A*>(p))
+			std::cout << "identify from pointer: A" << std::endl;
+		else if (dynamic_cast<B*>(p))
 			std::cout << "identify from pointer: B" << std::endl;
-		} catch (std::exception &ex) {
-			try {
-				C &c = dynamic_cast<C&>(*p);
-				(void)c;
-				std::cout << "identify from pointer: C" << std::endl;
-			} catch (std::exception &ex) {
-				std::cerr << ex.what() << std::endl;
-			}
-		}
+		else if (dynamic_cast<C*>(p))
+			std::cout << "identify from pointer: C" << std::endl;
 	}
 }
 
 void identify(Base& p) {
-	try {
-		A &a = dynamic_cast<A&>(p);
-		(void)a;
-		std::cout << "identify from reference: A" << std::endl;
-	} catch (std::exception &ex) {
-		try {
-			B &b = dynamic_cast<B&>(p);
-			(void)b;
-			std::cout << "identify from reference: B" << std::endl;
-		} catch (std::exception &ex) {
-			try {
-				C &c = dynamic_cast<C&>(p);
-				(void)c;
-				std::cout << "identify from reference: C" << std::endl;
-			} catch (std::exception &ex) {
-				std::cerr << ex.what() << std::endl;
-			}
-		}
-	}
+	if (dynamic_cast<A*>(&p))
+		std::cout << "identify from pointer: A" << std::endl;
+	else if (dynamic_cast<B*>(&p))
+		std::cout << "identify from pointer: B" << std::endl;
+	else if (dynamic_cast<C*>(&p))
+		std::cout << "identify from pointer: C" << std::endl;
 }
 
 
 int main() {
 	Base *base = generate();
+	Base *base2 = NULL;
 	
 	identify(base);
 	identify(*base);
+
+	identify(base2);
+	identify(*base2);
 
 	delete base;
 	return 0;
