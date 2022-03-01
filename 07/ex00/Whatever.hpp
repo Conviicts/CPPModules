@@ -11,12 +11,16 @@ void	swap(T &a, T &b) {
 
 template<typename T>
 T	const &min(T const &x, T const &y) {
-	return (x >= y ? y : x);
+	if (y > x)
+		return (y);
+	return (x);
 }
 
 template<typename T>
 T	const &max(T const &x, T const &y) {
-	return (x >= y ? x : y);
+	if (x > y)
+		return (x);
+	return (y);
 }
 
 #endif
