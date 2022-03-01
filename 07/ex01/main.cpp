@@ -1,4 +1,4 @@
-#include "Iter.hpp"
+#include "iter.hpp"
 
 int main( void ) {
 	int			array1[4] = {1, 2, 3, 4};
