@@ -9,7 +9,7 @@ class Array {
 		unsigned int	_size;
 	public:
 		Array<T>(void) : _array(NULL) {};
-		Array<T>(unsigned int size) : _array(new T[size]), _size(size) {};
+		Array<T>(unsigned int n) : _array(new T[n]), _size(n) {};
 		~Array<T>(void) {
 			if (_array != NULL)
 				delete[] _array;
